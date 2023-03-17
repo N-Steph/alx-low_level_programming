@@ -13,7 +13,7 @@ int main(void)
 
 	while (ch < 123)
 	{
-		if (ch != 113 || ch != 101)
+		if (ch != 113 && ch != 101)
 			putchar(ch);
 		ch++;
 	}
