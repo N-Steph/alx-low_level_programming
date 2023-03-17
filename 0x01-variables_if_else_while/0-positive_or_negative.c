@@ -1,6 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
 
 /**
  * main - Entry point
@@ -22,6 +22,6 @@ int main(void)
 	if (n == 0)
 		printf("%d is zero\n", n);
 	if (n > 0)
-		printf("%d id positive\n", n);
+		printf("%d is positive\n", n);
 	return (0);
 }
