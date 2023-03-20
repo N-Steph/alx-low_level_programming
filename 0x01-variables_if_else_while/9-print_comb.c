@@ -2,22 +2,31 @@
 /**
  * main - Entry point
  *
- * This program all possible combinations of
+ * This program prints all possible combinations of
  * single-digit numbers
  *
  * Return: 0 (Success)
  */
 int main(void)
 {
-	int i;
+	int int_to_char; /*Stors the decimal value of digit character */
+	int comma;
+	int space;
+	int last_digit;
 
-	for (i = 48; i < 58; i++)
+	int_to_char = 48; /*initialization*/
+	comma = 44;
+	space = 32;
+	last_digit = 57;
+
+	while (int_to_char <= last_digit)
 	{
-		putchar(i);
-		if (i != 57)
+		putchar(int_to_char);
+		int_to_char++;
+		if (int_to_char <= last_digit)
 		{
-			putchar(44);
-			putchar(32);
+			putchar(comma);
+			putchar(space);
 		}
 	}
 	putchar(10);
