@@ -2,32 +2,48 @@
 /**
  * main - Entry point
  *
- * This program print all possible different
- * combinations of two digits.
+ * This program prints all possible
+ * combinations of two digits
  *
  * Return: 0 (Success)
  */
 int main(void)
 {
-	int i;
-	int j;
+	int first_digit;
+	int second_digit;
+	int lower_bound;
+	int upper_bound;
+	int comma;
+	int space;
+	int newline;
 
-	for (i = 48; i < 58; i++)
+	first_digit = 48;
+	second_digit = 48;
+	lower_bound = 48;
+	upper_bound = 57;
+	comma = 44;
+	space = 32;
+	newline = 10;
+
+	while (first_digit < (upper_bound + 1))
 	{
-		for (j = 48; j < 58; j++)
+		if (second_digit > first_digit)
 		{
-			if (i < j)
+			putchar(first_digit);
+			putchar(second_digit);
+			if (first_digit != upper_bound - 1 || second_digit != upper_bound)
 			{
-				putchar(i);
-				putchar(j);
-				if (i != 56 || j != 57)
-				{
-					putchar(44);
-					putchar(32);
-				}
+				putchar(comma);
+				putchar(space);
 			}
 		}
+		second_digit++;
+		if (second_digit > upper_bound)
+		{
+			first_digit++;
+			second_digit = 0;
+		}
 	}
-	putchar(10);
+	putchar(newline);
 	return (0);
 }
