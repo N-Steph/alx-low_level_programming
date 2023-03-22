@@ -14,19 +14,26 @@ void print_to_98(int n)
 	int state;
 
 	state = 1;
-	while (state) 
+	while (state)
 	{
-		while (n != 98)
+		if (n == 98)
 		{
-			printf("%d", n);
-			if (n < 98)
-				n++;
-			else if (n > 98)
-				n--;
-			if (n == 98)
-				printf(", %d\n", n);
-			else
-				printf(", ");
+			printf("%d\n", n);
+		}
+		else
+		{
+			while (n != 98)
+			{
+				printf("%d", n);
+				if (n < 98)
+					n++;
+				else if (n > 98)
+					n--;
+				if (n == 98)
+					printf(", %d\n", n);
+				else
+					printf(", ");
+			}
 		}
 		state = 0;
 	}
