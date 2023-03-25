@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * more_number - print from 1 to 14
+ * more_numbers - print from 1 to 14
  *
  * Return: void
  */
