@@ -21,6 +21,7 @@ void print_diagonal(int n)
 		while (counter < n)
 		{
 			_putchar(BACKSLASH);
+			_putchar(NEWLINE);
 			counter++;
 		}
 	}
