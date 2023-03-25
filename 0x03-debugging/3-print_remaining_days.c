@@ -14,7 +14,7 @@ void print_remaining_days(int month, int day, int year)
 {
 	int days_of_year;
 
-	if (year % 400 != 0 && year % 100 != 0)
+	if (year % 400 == 0 && year % 100 == 0)
 		days_of_year = 366;
 	else if (year % 4 == 0)
 		days_of_year = 366;
