@@ -26,6 +26,7 @@ int main(void)
 			printf("%d ", number);
 		number++;
 	}
+	printf("\b");
 	printf("\n");
 	return (0);
 }
