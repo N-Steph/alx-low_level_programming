@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_line - draw straight line in terminal
+ * print_diagonal - draw diagonal line in terminal
  * @n: number of times "\\" is printed
  *
  * This function draw a diagonal line in the terminal,
@@ -17,10 +17,10 @@ void print_diagonal(int n)
 
 	counter = 0;
 	NEWLINE = 10;
-        BACKSLASH = 92;
+	BACKSLASH = 92;
 	i = 0;
 	SPACE = 32;
-       	if (n > 0)
+	if (n > 0)
 	{
 		while (counter < n)
 		{
@@ -35,5 +35,8 @@ void print_diagonal(int n)
 			i = 0;
 		}
 	}
-	_putchar(NEWLINE);
+	else
+	{
+		_putchar(NEWLINE);
+	}
 }
