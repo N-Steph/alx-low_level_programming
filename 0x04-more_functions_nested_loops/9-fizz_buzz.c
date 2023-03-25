@@ -12,21 +12,24 @@
 int main(void)
 {
 	int number;
+	int limit;
 
+	limit = 100;
 	number = 1;
-	while (number <= 100)
+	while (number <= limit)
 	{
 		if (number % 3 == 0 && number % 5 == 0)
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		else if (number % 3 == 0)
-			printf("Fizz ");
+			printf("Fizz");
 		else if (number % 5 == 0)
-			printf("Buzz ");
+			printf("Buzz");
 		else
-			printf("%d ", number);
+			printf("%d", number);
+		if (number != limit)
+			printf(" ");
 		number++;
 	}
-	printf("\b");
 	printf("\n");
 	return (0);
 }
