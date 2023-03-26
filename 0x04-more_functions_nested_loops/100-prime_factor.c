@@ -19,7 +19,8 @@ int main(void)
 	NUM = 612852475143;
 	while (number <= NUM)
 	{
-		if (number == 2 || number == 3 || number == 5 || number == 7 || number == 11 || number == 13)
+		if (number == 2 || number == 3 || number == 5 ||
+				number == 7 || number == 11 || number == 13)
 		{
 			prime_number = number;
 			if (NUM % prime_number == 0)
@@ -28,7 +29,8 @@ int main(void)
 				NUM /= prime_number;
 			}
 		}
-		else if (number % 2 != 0 || number % 3 != 0 || number % 5 != 0 || number % 7 != 0 || number % 11 != 0 || number % 13 != 0)
+		else if (number % 2 != 0 || number % 3 != 0 || number % 5 != 0 ||
+				number % 7 != 0 || number % 11 != 0 || number % 13 != 0)
 		{
 			prime_number = number;
 			if (NUM % prime_number == 0)
