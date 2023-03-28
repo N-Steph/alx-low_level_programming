@@ -12,7 +12,6 @@ void print_rev(char *s)
 	int NEWLINE;
 
 	NEWLINE = 10;
-	
 	len = 0;
 	while (*s != '\0')
 	{
