@@ -12,7 +12,6 @@
 void print_array(int *a, int n)
 {
 	int counter;
-	/*int len;*/
 
 	counter = 0;
 	while (counter < n)
@@ -24,17 +23,4 @@ void print_array(int *a, int n)
 			printf(", ");
 	}
 	printf("\n");
-	/*
-	if (n <= len)
-	{
-		while (counter < n)
-		{
-			printf("%d", *a);
-			a += 1;
-			counter++;
-			if (counter < n)
-				printf(", ");
-		}
-	}
-	*/
 }
