@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strcat -  contenate two strings
+ * _strncat -  contenate two strings
  * @src: points to string1
  * @dest: points to string2
  * @n: number of character of string1 to append
