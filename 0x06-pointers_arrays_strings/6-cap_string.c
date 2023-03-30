@@ -27,8 +27,6 @@ char *cap_string(char *s)
 					*ptrs = *ptrs - 32;
 			}
 			ptrs++;
-			if (*ptrs == '\t')
-				*ptrs = ' ';
 		}
 		ptrs = s;
 	}
