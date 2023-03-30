@@ -28,14 +28,17 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	while (counter < n)
 	{
-		*ptrdest = *src;
-		ptrdest += 1;
-		src += 1;
-		counter++;
 		if (counter > len)
-			src -= 1;
+		{
+			*ptrdest = '\0';
+		}
+		else
+		{
+			*ptrdest = *src;
+			src += 1;
+		}
+		ptrdest += 1;
+		counter++;
 	}
-	if (*src == '\0')
-		*ptrdest = *src;
 	return (dest);
 }
