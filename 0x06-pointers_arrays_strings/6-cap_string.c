@@ -9,7 +9,7 @@
 char *cap_string(char *s)
 {
 	char word_separator[13] = {' ', '\t', '\n', ',', '.', '!',
-		'?', '"', '(', ')', '{', '}'};
+		'?', '"', '(', ')', '{', '}', ';'};
 	char *ptrs;
 	int i;
 
