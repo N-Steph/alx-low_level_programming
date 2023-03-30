@@ -20,6 +20,8 @@ char *cap_string(char *s)
 	{
 		while (*ptrs != '\0')
 		{
+			if (*ptrs == '\t')
+				*ptrs = ' ';
 			if (*ptrs == word_separator[i])
 			{
 				ptrs++;
