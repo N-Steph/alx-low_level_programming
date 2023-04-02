@@ -23,4 +23,5 @@ int main(void)
 			sum += multiple_of_5;
 	}
 	printf("%d\n", sum);
+	return (0);
 }
