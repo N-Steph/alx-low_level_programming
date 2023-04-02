@@ -10,19 +10,14 @@
 int main(void)
 {
 	int sum;
-	int multiple_of_3;
-	int multiple_of_5;
+	int number;
 
-	multiple_of_3 = 0;
-	multiple_of_5 = 0;
-	while ((multiple_of_3 < 1024) && (multiple_of_5 < 1024))
+	number = 0;
+	while (number < 1024)
 	{
-		multiple_of_3 += 3;
-		multiple_of_5 += 5;
-		if (multiple_of_3 < 1024)
-			sum += multiple_of_3;
-		if (multiple_of_5 < 1024)
-			sum += multiple_of_5;
+		if (number % 3 == 0 || number % 5 ==0)
+			sum += number;
+		number++;
 	}
 	printf("%d\n", sum);
 	return (0);
