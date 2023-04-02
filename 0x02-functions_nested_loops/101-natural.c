@@ -13,10 +13,12 @@ int main(void)
 	int multiple_of_3;
 	int multiple_of_5;
 
+	multiple_of_3 = 0;
+	multiple_of_5 = 0;
 	while ((multiple_of_3 < 1024) && (multiple_of_5 < 1024))
 	{
-		multiple_of_3++;
-		multiple_of_5++;
+		multiple_of_3 += 3;
+		multiple_of_5 += 5;
 		if (multiple_of_3 < 1024)
 			sum += multiple_of_3;
 		if (multiple_of_5 < 1024)
