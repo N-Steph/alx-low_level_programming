@@ -1,33 +1,33 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _strspn - get length of a prefix substring
+ * _strpbrk - searches a string for any set of bytes.
  * @s: pointer to first character of string
  * @accept: pointer to first character of substring
  *
- * This function calculate the length of the initial
- * segment of s which consists of entirely of bytes in
- * accepts
- *
  * Return: length of substring of s containing accept
  */
-char * _strpbrk(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	char *smallest_char_loc;
 	char *current_char_loc;
 	int length_of_substring;
 	int i;
+	int counter;
 
 	length_of_substring = _strlen(accept);
 	smallest_char_loc = accept;
 	for (i = 0; i < length_of_substring + 1; i++)
 	{
 		current_char_loc = _strchr(s, *accept);
-		if (current_char_loc < smallest_char_loc && current_char_loc != 0)
+		if (current_char_loc == 0)
+			counter++;
+		if (current_char_loc <= smallest_char_loc && current_char_loc != 0)
 			smallest_char_loc = current_char_loc;
 		accept++;
 	}
+	if (counter == length_of_substring)
+		smallest_char_loc = 0;
 	return (smallest_char_loc);
 }
 
