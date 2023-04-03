@@ -19,6 +19,8 @@ int _strspn(char *s, char *accept)
 
 	length_of_substring = 0;
 	furthest_char_loc = s;
+	if (*accept == '\0')
+		return (length_of_substring);
 	while (*accept != '\0')
 	{
 		current_char_loc = _strchr(s, *accept);
