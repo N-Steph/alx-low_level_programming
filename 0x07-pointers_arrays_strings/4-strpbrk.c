@@ -17,6 +17,7 @@ char *_strpbrk(char *s, char *accept)
 
 	length_of_substring = _strlen(accept);
 	smallest_char_loc = accept;
+	counter = 0;
 	for (i = 0; i < length_of_substring + 1; i++)
 	{
 		current_char_loc = _strchr(s, *accept);
