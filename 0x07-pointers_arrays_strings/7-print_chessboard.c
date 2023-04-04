@@ -2,7 +2,7 @@
 
 /**
  * print_chessboard - print chessboard
- * @: pointer to first array index
+ * @a: pointer to first array index
  *
  * Return: Nothing
  */
