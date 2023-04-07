@@ -32,7 +32,7 @@ int sqrt_help(int n, int sqrt)
 	int result;
 	int answer;
 
-	if (sqrt > n / 2)
+	if (sqrt > n / 2 && n != 1)
 	{
 		return (-1);
 	}
