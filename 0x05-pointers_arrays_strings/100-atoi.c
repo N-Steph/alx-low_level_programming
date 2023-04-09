@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdint.h>
 
 /**
  * _atoi - convert string to integer
@@ -11,7 +12,7 @@ int _atoi(char *s)
 {
 	int sign;
 	int counter;
-	int number;
+	int64_t number;
 
 	sign = 1;
 	number = 0;
