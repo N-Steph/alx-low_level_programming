@@ -3,7 +3,7 @@
 /**
  * main - print source filename
  * @argc: argument count
- * @agrv: array of strings passed to main.
+ * @argv: array of strings passed to main.
  *
  * Return: 0 (Success).
  */
