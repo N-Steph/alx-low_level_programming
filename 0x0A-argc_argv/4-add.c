@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	int sum;
 	int i;
 	int number;
+	char *ptr_num;
 
 	sum = 0;
 	if (argc < 2)
@@ -23,18 +24,20 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			while (**argv != '\0')
+			ptr_num = argv[i];
+			while (*argv[i] != '\0')
 			{
-				if (**argv < 48 || **argv > 57)
+				if (*argv[i] <= 47 || *argv[i] >= 58)
 				{
 					printf("Error\n");
 					return (1);
 				}
-				*argv = *argv + 1;
+				argv[i] = argv[i] + 1;
 			}
+			argv[i] = ptr_num;
 			number = atoi(argv[i]);
 			if (number >= 0)
-				sum += atoi(argv[i]);
+				sum += number;
 		}
 		printf("%d\n", sum);
 	}
