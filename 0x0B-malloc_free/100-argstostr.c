@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 		size += strlen(*ptr_temp0);
 		ptr_temp0++;
 	}
-	ptr_concat = malloc(sizeof(char) * (size + (ac - 1)));
+	ptr_concat = malloc(sizeof(char) * (size + ac));
 	if (ptr_concat == 0)
 		return (0);
 	ptr_temp1 = ptr_concat;
