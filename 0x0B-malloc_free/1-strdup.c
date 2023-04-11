@@ -18,16 +18,23 @@ char *_strdup(char *str)
 	char *ptr_temp;
 	int i;
 
-	size = strlen(str);
-	ptr_to_cp_mem = malloc(sizeof(char) * size);
-	if (ptr_to_cp_mem == 0)
-		return (ptr_to_cp_mem);
-	ptr_temp = ptr_to_cp_mem;
-	for (i = 0; i < (size + 1); i++)
+	if (str == 0)
 	{
-		*ptr_temp = *str;
-		ptr_temp++;
-		str++;
+		ptr_to_cp_mem = 0;
+	}
+	else
+	{
+		size = strlen(str);
+		ptr_to_cp_mem = malloc(sizeof(char) * (size + 1));
+		if (ptr_to_cp_mem == 0)
+			return (ptr_to_cp_mem);
+		ptr_temp = ptr_to_cp_mem;
+		for (i = 0; i < (size + 1); i++)
+		{
+			*ptr_temp = *str;
+			ptr_temp++;
+			str++;
+		}
 	}
 	return (ptr_to_cp_mem);
 }
