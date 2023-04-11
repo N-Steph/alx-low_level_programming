@@ -29,7 +29,13 @@ char *str_concat(char *s1, char *s2)
 	ptr_to_cat_mem = malloc(sizeof(char) * (size + 1));
 	if (ptr_to_cat_mem == 0)
 		return (ptr_to_cat_mem);
-	ptr_to_cat_mem = strcpy(ptr_to_cat_mem, s1);
-	ptr_to_cat_mem = strcat(ptr_to_cat_mem, s2);
+	if (s1 == 0)
+		ptr_to_cat_mem = strcpy(ptr_to_cat_mem, "");
+	else
+		ptr_to_cat_mem = strcpy(ptr_to_cat_mem, s1);
+	if (s2 == 0)
+		ptr_to_cat_mem = strcat(ptr_to_cat_mem, "");
+	else
+		ptr_to_cat_mem = strcat(ptr_to_cat_mem, s2);
 	return (ptr_to_cat_mem);
 }
