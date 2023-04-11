@@ -22,7 +22,6 @@ char *argstostr(int ac, char **av)
 		return (0);
 	size = 0;
 	ptr_temp0 = av;
-	ptr_temp0++;
 	for (i = 1; i < ac; i++)
 	{
 		size += strlen(*ptr_temp0);
@@ -32,8 +31,7 @@ char *argstostr(int ac, char **av)
 	if (ptr_concat == 0)
 		return (0);
 	ptr_temp1 = ptr_concat;
-	av++;
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		ptr_temp1 = strcpy(ptr_temp1, *av);
 		ptr_temp1 += strlen(*av);
