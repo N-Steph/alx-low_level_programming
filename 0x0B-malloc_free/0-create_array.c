@@ -15,7 +15,7 @@ char *create_array(unsigned int size, char c)
 	char *ptr_temp;
 	unsigned int i;
 
-	if (size != 0)
+	if (size == 0)
 	{
 		ptr_to_created_array = 0;
 	}
