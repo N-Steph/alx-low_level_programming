@@ -29,10 +29,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else
 		size_nconcat += strlen(s2);
 
-	ptr_char = malloc(sizeof(char) * (size_nconcat + 1));
-	if (ptr_char == 0)
-		return (0);
+	ptr_char = malloc_checked(sizeof(char) * (size_nconcat + 1));
 	strcpy(ptr_char, s1);
 	strncat(ptr_char, s2, n);
 	return (ptr_char);
+}
+
+/**
+ * malloc_checked - allocates memory
+ * @b: number of bytes to allocate
+ *
+ * Return: pointer to memory allocated
+ */
+void *malloc_checked(unsigned int b)
+{
+	void *ptr;
+
+	ptr = malloc(b);
+	if (ptr == 0)
+		exit(0);
+	return (ptr);
 }
