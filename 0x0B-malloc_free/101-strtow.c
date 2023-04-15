@@ -93,7 +93,6 @@ char **strtow(char *str)
 	char **ptr_ptr;
 	char **ptr_temp;
 	int num_characters;
-	int i;
 
 	if (str == 0 || strlen(str) == 0 || (*str == ' ' && strlen(str) == 1))
 		return (0);
@@ -102,7 +101,7 @@ char **strtow(char *str)
 	if (ptr_ptr == 0)
 		return (0);
 	ptr_temp = ptr_ptr;
-	for (i = 0; i < num_words; i++)
+	while (*ptr_temp == 0)
 	{
 		num_characters = count_characters(str);
 		*ptr_temp = malloc(sizeof(char) * (num_characters + 1));
