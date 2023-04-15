@@ -22,7 +22,7 @@ char *argstostr(int ac, char **av)
 		return (0);
 	size = 0;
 	ptr_temp0 = av;
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		size += strlen(*ptr_temp0);
 		ptr_temp0++;
