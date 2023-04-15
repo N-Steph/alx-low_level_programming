@@ -107,7 +107,7 @@ char **strtow(char *str)
 	int num_characters;
 	int i;
 
-	if (str == 0 || strlen(str) == 0)
+	if (str == 0 || strlen(str) == 0 || (*str == 32 && strlen(str) == 1))
 		return (0);
 	num_words = count_words(str);
 	ptr_ptr = malloc(sizeof(ptr_ptr) * (num_words + 1));
