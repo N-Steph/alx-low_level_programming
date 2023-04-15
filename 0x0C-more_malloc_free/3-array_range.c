@@ -54,7 +54,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (ptr == 0)
 		return (0);
 	ptr_temp = ptr;
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < nmemb * size; i++)
 	{
 		*ptr_temp = 0;
 		ptr_temp += size;
