@@ -33,9 +33,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (ptr_char == 0)
 		return (0);
 	strcpy(ptr_char, s1);
-	if (n >= strlen(s2))
-		strcat(ptr_char, s2);
-	else
-		strncat(ptr_char, s2, n);
+	strncat(ptr_char, s2);
 	return (ptr_char);
 }
