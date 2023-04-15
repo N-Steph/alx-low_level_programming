@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 /**
  * argstostr - concatenates all the arguments of program
@@ -26,7 +27,7 @@ char *argstostr(int ac, char **av)
 		size += strlen(*ptr_temp0);
 		ptr_temp0++;
 	}
-	ptr_concat = malloc((sizeof(char) * (size + ac)) + sizeof(char));
+	ptr_concat = malloc(sizeof(char) * (size + ac + 1));
 	if (ptr_concat == 0)
 		return (0);
 	ptr_temp1 = ptr_concat;
