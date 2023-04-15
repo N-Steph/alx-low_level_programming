@@ -35,7 +35,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (ptr_char == 0)
 		return (0);
 	strcpy(ptr_char, s1);
-	if (n != 0)
+	if (n != 0 && s2 != 0)
 		strncat(ptr_char, s2, n);
 	return (ptr_char);
 }
