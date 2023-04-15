@@ -110,7 +110,7 @@ char **strtow(char *str)
 	if (str == 0 || strlen(str) == 0)
 		return (0);
 	num_words = count_words(str);
-	ptr_ptr = malloc(sizeof(ptr_ptr) * num_words);
+	ptr_ptr = malloc(sizeof(ptr_ptr) * (num_words + 1));
 	if (ptr_ptr == 0)
 		return (0);
 	ptr_temp = ptr_ptr;
@@ -123,8 +123,7 @@ char **strtow(char *str)
 			str++;
 		}
 		strncpy(*ptr_temp, str, num_characters);
-		*ptr_temp += num_characters;
-		**ptr_temp = '\0';
+		*(*ptr_temp + num_characters) = '\0';
 		str += num_characters;
 		ptr_temp++;
 	}
