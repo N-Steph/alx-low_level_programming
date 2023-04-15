@@ -89,10 +89,11 @@ int count_words(char *str)
  */
 char **strtow(char *str)
 {
-	int num_words;
+	unsigned int num_words;
 	char **ptr_ptr;
 	char **ptr_temp;
-	int num_characters;
+	unsigned int i;
+	unsigned int num_characters;
 
 	if (str == 0 || strlen(str) == 0 || (*str == ' ' && strlen(str) == 1))
 		return (0);
