@@ -16,10 +16,12 @@ int count_characters(char *str)
 	int num_character;
 	char *ptr1;
 	char *ptr2;
+	char *ptr_free;
 	int len;
 
 	len = strlen(str);
 	ptr1 = malloc(sizeof(char) * (len + 1));
+	ptr_free = ptr1;
 	if (ptr1 == 0)
 		return (0);
 	strcpy(ptr1, str);
@@ -42,6 +44,7 @@ int count_characters(char *str)
 		ptr1++;
 		ptr2 = ptr1;
 	}
+	free(ptr_free);
 	return (num_character);
 }
 
@@ -55,12 +58,14 @@ int count_characters(char *str)
 int count_words(char *str)
 {
 	char *ptr1;
+	char *ptr_free;
 	char *ptr2;
 	int len;
 	int num_words;
 
 	len = strlen(str);
 	ptr1 = malloc(sizeof(char) * (len + 1));
+	ptr_free = ptr1;
 	if (ptr1 == 0)
 		return (0);
 	strcpy(ptr1, str);
@@ -90,6 +95,7 @@ int count_words(char *str)
 		}
 		ptr2 = ptr1;
 	}
+	free(ptr_free);
 	return (num_words);
 }
 
