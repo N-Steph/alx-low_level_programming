@@ -100,14 +100,14 @@ char **strtow(char *str)
 	if (str == 0 || strlen(str) == 0)
 		return (0);
 	num_words = count_words(str);
-	ptr_ptr = malloc(sizeof(ptr_ptr) * (num_words));
+	ptr_ptr = malloc(sizeof(ptr_ptr) * (num_words + 1));
 	if (ptr_ptr == 0)
 		return (0);
 	ptr_temp = ptr_ptr;
 	for (i = 0; i < num_words; i++)
 	{
 		num_characters = count_characters(str);
-		*ptr_temp = malloc(sizeof(char) * (num_characters));
+		*ptr_temp = malloc(sizeof(char) * (num_characters + 1));
 		while (*str <= 33)
 		{
 			str++;
