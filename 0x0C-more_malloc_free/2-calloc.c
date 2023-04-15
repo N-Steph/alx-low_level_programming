@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <limits.h>
 
 /**
  * _calloc - Allocate memory of an array
@@ -15,6 +16,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
+		return (0);
+	if (size * nmemb > UINT_MAX)
 		return (0);
 	ptr = malloc(size * nmemb);
 	if (ptr == 0)
