@@ -123,7 +123,7 @@ char **strtow(char *str)
 	for (i = 0; i < num_words; i++)
 	{
 		num_characters = count_characters(str);
-		*ptr_temp = malloc(sizeof(char) * (num_characters + 1));
+		*ptr_temp = malloc(sizeof(char) * (num_characters));
 		while (*str <= 33)
 		{
 			str++;
