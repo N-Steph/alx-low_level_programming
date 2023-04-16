@@ -19,16 +19,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		ptr_new = malloc(new_size);
 		return (ptr_new);
 	}
-	if (ptr == 0 && new_size == 0)
-	{
-		return (0);
-	}
 	else if (new_size == 0 && ptr != 0)
 	{
 		free(ptr);
 		return (0);
 	}
-	else if (new_size == old_size)
+	else if (new_size == old_size && new_size != 0 && old_size != 0 )
 	{
 		return (ptr);
 	}
