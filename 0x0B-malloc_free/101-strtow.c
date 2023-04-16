@@ -20,7 +20,7 @@ int count_characters(char *str)
 	ptr2 = str;
 	while (*ptr1 != '\0')
 	{
-		if ((*ptr1 >= 33 && *ptr1 <= 126))
+		if (*ptr1 >= 33 && *ptr1 <= 126)
 		{
 			while (*ptr2 >= 33 && *ptr2 <= 126)
 			{
@@ -55,7 +55,7 @@ int count_words(char *str)
 	ptr2 = str;
 	while (*ptr1 != '\0')
 	{
-		if ((*ptr1 >= 33 && *ptr1 <= 126))
+		if (*ptr1 >= 33 && *ptr1 <= 126)
 		{
 			while (*ptr2 != '\0')
 			{
