@@ -91,30 +91,31 @@ char **strtow(char *str)
 {
 	unsigned int num_words;
 	char **ptr_ptr;
-	char **ptr_temp;
 	unsigned int i;
 	unsigned int num_characters;
 
-	if (str == 0 || strlen(str) == 0 || (*str == ' ' && strlen(str) == 1))
+	if (str == 0 || strlen(str) == 0)
 		return (0);
 	num_words = count_words(str);
-	ptr_ptr = malloc(sizeof(str) * (num_words) + sizeof(char));
+	if (num_words == 0)
+		return (0);
+	ptr_ptr = malloc(sizeof(char *) * (num_words + 1));
 	if (ptr_ptr == 0)
 		return (0);
-	ptr_temp = ptr_ptr;
 	for (i = 0; i < num_words; i++)
 	{
 		num_characters = count_characters(str);
-		*ptr_temp = malloc(sizeof(char) * (num_characters + 1));
+		*ptr_ptr = malloc(sizeof(char) * (num_characters + 1));
 		while (*str <= 33)
 		{
 			str++;
 		}
-		strncpy(*ptr_temp, str, num_characters);
-		*(*ptr_temp + num_characters) = '\0';
+		strncpy(*ptr_ptr, str, num_characters);
+		*(*ptr_ptr + num_characters) = '\0';
 		str += num_characters;
-		ptr_temp++;
+		ptr_ptr++;
 	}
-	*ptr_temp = 0;
+	*ptr_ptr = 0;
+	ptr_ptr -= num_words;
 	return (ptr_ptr);
 }
