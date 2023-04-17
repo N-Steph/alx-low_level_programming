@@ -18,11 +18,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (ptr_new_dog == 0)
 		return (0);
 	if (name == NULL)
-		(*ptr_new_dog).name = "(nil)";
+		return (0);
 	else
 		(*ptr_new_dog).name = name;
 	if (owner == NULL)
-		(*ptr_new_dog).owner = "(nil)";
+		return (0);
 	else
 		(*ptr_new_dog).owner = owner;
 	(*ptr_new_dog).age = age;
