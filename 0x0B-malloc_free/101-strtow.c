@@ -99,7 +99,7 @@ char **strtow(char *str)
 	num_words = count_words(str);
 	if (num_words == 0)
 		return (0);
-	ptr_ptr = malloc(sizeof(char *) * (num_words + 1));
+	ptr_ptr = malloc(sizeof(char *) * (num_words));
 	if (ptr_ptr == 0)
 		return (0);
 	for (i = 0; i < num_words; i++)
