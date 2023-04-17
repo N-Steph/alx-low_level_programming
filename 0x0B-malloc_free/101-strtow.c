@@ -106,7 +106,7 @@ char **strtow(char *str)
 	{
 		num_characters = count_characters(str);
 		*ptr_ptr = malloc(sizeof(char) * (num_characters + 1));
-		while (*str <= 33)
+		while (*str <= 32)
 		{
 			str++;
 		}
