@@ -17,14 +17,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	ptr_new_dog = malloc(sizeof(dog_t));
 	if (ptr_new_dog == 0)
 		return (0);
-	if (name == NULL)
-		return (0);
-	else
-		(*ptr_new_dog).name = name;
-	if (owner == NULL)
-		return (0);
-	else
-		(*ptr_new_dog).owner = owner;
+	(*ptr_new_dog).name = name;
+	(*ptr_new_dog).owner = owner;
 	(*ptr_new_dog).age = age;
 	return (ptr_new_dog);
 }
