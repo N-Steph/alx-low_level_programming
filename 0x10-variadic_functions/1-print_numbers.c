@@ -16,12 +16,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list opt_arg;
 
 	va_start(opt_arg, n);
-	if (separator != NULL && n != 0)
+	if (n != 0)
 	{
 		for (i = 0; i < n; i++)
 		{
 			printf("%d", va_arg(opt_arg, int));
-			if (i != n - 1)
+			if (i != n - 1 && separator != NULL)
 				printf("%s", separator);
 		}
 	}
