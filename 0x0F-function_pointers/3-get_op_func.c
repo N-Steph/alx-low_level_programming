@@ -18,6 +18,7 @@ func_ptr get_op_func(char *s)
 		{"*", op_mul},
 		{"/", op_div},
 		{"%", op_mod},
+		{".", op_mul},
 		{NULL, NULL}
 	};
 	int i;
