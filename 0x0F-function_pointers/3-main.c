@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int num1;
 	int num2;
 	char *operator;
-	char *operators = "+-*/%";
+	char *operators = "+-*/%.";
 	char *search_result;
 	int (*answer)(int, int);
 	int result;
