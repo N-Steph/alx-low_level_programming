@@ -23,5 +23,4 @@ list_t *add_node_end(list_t **head, const char *str);
 unsigned int _strlen(const char *s);
 list_t *move_to_last_node(list_t *h);
 void free_list(list_t *head);
-void b_main() __attribute((constructor));
 #endif /* LIST_H */
