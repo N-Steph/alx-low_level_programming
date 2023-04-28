@@ -12,8 +12,6 @@ size_t list_len(const list_t *h)
 	size_t num_nodes;
 
 	num_nodes = 0;
-	if (h == 0)
-		exit(1);
 	while (h != 0)
 	{
 		num_nodes++;
