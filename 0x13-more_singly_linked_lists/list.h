@@ -1,5 +1,6 @@
 #ifndef LISTS_H
 #define LISTS_H
+#include <stddef.h>
 int _putchar(char);
 /**
  * struct listint_s - singly linked list
