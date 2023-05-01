@@ -15,7 +15,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *ptr_idx_1;
 	listint_t *ptr_temp;
 
-	if (head == NULL || *head == NULL || idx >= listint_len(*head))
+	if (head == NULL || *head == NULL || idx > listint_len(*head))
 		return (NULL);
 	if (idx == listint_len(*head))
 		return (add_nodeint_end_beta(head, n));
