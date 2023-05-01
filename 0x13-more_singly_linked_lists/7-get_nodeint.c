@@ -3,7 +3,7 @@
 /**
  * get_nodeint_at_index - get address of nth node.
  * @head: pointer to head node
- * @n: nth node to find
+ * @index: nth node to find
  *
  * Return: address of nth node.
  */
