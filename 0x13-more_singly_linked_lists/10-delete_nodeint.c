@@ -84,11 +84,13 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
  * delete_last_node- add new node at end of linked listint_t list.
  * @head: address of pointer to head node
  *
- * Return: data of deleted node 
+ * Return: data of deleted node
  */
 int delete_last_node(listint_t **head)
 {
 	listint_t *ptr_temp;
+	int n;
+	int i;
 
 	ptr_temp = *head;
 	if (head == NULL)
@@ -97,28 +99,13 @@ int delete_last_node(listint_t **head)
 	{
 		return (0);
 	}
-	ptr_temp = mv_node_before_last(*head);
+	n = listint_len(*head);
+	i = 0;
+	while (i < n - 2)
+		ptr_temp = ptr_temp->next;
 	free(ptr_temp->next);
 	ptr_temp->next = NULL;
 	return (0);
-}
-
-/**
- * mv_last_node - get address of last node of listint_t list
- * @s: pointer to head node
- *
- * Return: address of last node
- */
-listint_t *mv_node_before_last(listint_t *s)
-{
-	int n;
-	int i;
-
-	n = listint_len(s);
-	i = 0;
-	while (i < n - 2)
-		s = s->next;
-	return (s);
 }
 
 
