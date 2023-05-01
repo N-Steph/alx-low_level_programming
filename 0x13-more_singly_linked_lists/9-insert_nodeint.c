@@ -27,6 +27,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	ptr_temp->n = n;
 	ptr_idx = get_nodeint_at_index(*head, idx);
 	ptr_idx_1 = get_nodeint_at_index(*head, idx - 1);
+	if (ptr_idx == NULL || ptr_idx_1 == NULL)
+		return (NULL);
 	ptr_temp->next = ptr_idx;
 	ptr_idx_1->next = ptr_temp;
 	return (ptr_temp);
