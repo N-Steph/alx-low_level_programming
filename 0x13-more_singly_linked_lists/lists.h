@@ -20,4 +20,5 @@ size_t listint_len(const listint_t *h);
 listint_t *add_nodeint(listint_t **head, const int n);
 listint_t *add_nodeint_end(listint_t **head, const int n);
 listint_t *mv_last_node(listint_t *s);
+void free_listint(listint-t *head);
 #endif /* LISTS_H */
