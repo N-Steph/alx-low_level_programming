@@ -120,6 +120,8 @@ int pop_listint(listint_t **head)
 	listint_t *ptr_temp;
 	int n;
 
+	if (head == NULL || *head == NULL)
+		return (0);
 	ptr_temp = *head;
 	n = ptr_temp->n;
 	*head = (*head)->next;
