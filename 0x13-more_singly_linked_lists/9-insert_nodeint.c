@@ -33,7 +33,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 
 /**
- * listint - count the number of nodes in linked listint_t list
+ * listint_len - count the number of nodes in linked listint_t list
  * @h: pointer to head node
  *
  * Return: number of nodes.
@@ -54,7 +54,7 @@ size_t listint_len(const listint_t *h)
 
 
 /**
- * add_nodeint_end - add new node at end of linked listint_t list.
+ * add_nodeint_end_beta - add new node at end of linked listint_t list.
  * @head: address of pointer to head node
  * @n: integer element
  *
