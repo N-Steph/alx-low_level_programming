@@ -19,7 +19,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 	if (idx == listint_len(*head))
 		return (add_nodeint_end_beta(head, n));
-	else if (idx == 0 || *head = NULL)
+	else if (idx == 0 || *head == NULL)
 		return (add_nodeint(head, n));
 	ptr_temp = malloc(sizeof(listint_t));
 	if (ptr_temp == NULL)
