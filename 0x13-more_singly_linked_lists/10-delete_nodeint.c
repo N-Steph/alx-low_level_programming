@@ -6,7 +6,7 @@
  * @head: address of pointer to head node
  * @index: position of node to delete
  *
- * Return: data of node deleted
+ * Return: 1 (sucess) , -1 (failure)
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
