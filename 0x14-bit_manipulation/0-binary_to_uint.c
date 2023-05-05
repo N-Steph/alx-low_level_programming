@@ -23,8 +23,6 @@ unsigned int binary_to_uint(const char *b)
 		b++;
 		counter++;
 	}
-	if (counter > 64)
-		return (0);
 	b--;
 	for (i = 0; i < counter; i++)
 	{
