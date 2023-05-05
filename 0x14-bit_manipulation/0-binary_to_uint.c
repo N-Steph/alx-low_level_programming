@@ -13,8 +13,8 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int index_value = 1;
 	unsigned int base_10_num = 0;
 	unsigned int counter = 0;
-	unsigned i;
-	unsigned j;
+	unsigned int i;
+	unsigned int j;
 
 	if (b == NULL)
 		return (0);
