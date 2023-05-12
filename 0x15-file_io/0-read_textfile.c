@@ -63,8 +63,10 @@ size_t print_buffer(int fdes, char *characters, size_t count)
 	n = read(fdes, characters, count);
 	if (n == -1)
 		exit(0);
-	i = write(STDIN_FILENO, characters, count);
-	if (i == -1)
-		exit(0);
+	for (i = 0; i < n; i++)
+	{
+		write(STDOUT_FILENO, characters, 1);
+		characters++;
+	}
 	return (i);
 }
