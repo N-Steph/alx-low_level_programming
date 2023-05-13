@@ -46,7 +46,7 @@ void copy_file(char *file_from, char *file_to)
 		n = read(fd_file_from, buffer, 1024);
 		if (n == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 			exit(98);
 		}
 		i = 0;
