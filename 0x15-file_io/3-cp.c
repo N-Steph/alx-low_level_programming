@@ -34,8 +34,7 @@ int main(int argc, char **argv)
  */
 void copy_file(char *file_from, char *file_to)
 {
-	int fd_file_from;
-	int fd_file_to;
+	int fd_file_from, fd_file_to;
 	int n, i, m;
 	char buffer[1024];
 
@@ -65,7 +64,7 @@ void copy_file(char *file_from, char *file_to)
 	n = close(fd_file_from);
 	if (n == -1)
 	{
-		dprintf(STDERR_FILENO, "Erro: Can't close fd %d\n", fd_file_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_file_from);
 		exit(100);
 	}
 	n = close(fd_file_to);
@@ -121,7 +120,7 @@ int check_file_from(char *file_from)
 	fd_file_from = open(file_from, O_RDONLY);
 	if (fd_file_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read form %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", file_from);
 		exit(98);
 	}
 	return (fd_file_from);
