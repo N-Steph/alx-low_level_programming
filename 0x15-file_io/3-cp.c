@@ -36,9 +36,7 @@ void copy_file(char *file_from, char *file_to)
 {
 	int fd_file_from;
 	int fd_file_to;
-	int n;
-	int i;
-	int m;
+	int n, i, m;
 	char buffer[1024];
 
 	fd_file_from = check_file_from(file_from);
