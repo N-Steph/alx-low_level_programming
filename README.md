@@ -33,3 +33,7 @@ Starting with
 * use a static library
 
 9. **argc, argv**
+
+10. Memory allocation
+* malloc
+* free
