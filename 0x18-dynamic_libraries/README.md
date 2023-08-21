@@ -25,7 +25,7 @@ operating system's dynamic linker/loader when that reference is encounter.
          at any memory address and still function correctly.
 
 **step1: Create dynamic library with object code**
-  >gcc -shared -o lib<dynamiclibraryname>.so file1.o, file2.o, ...
+  >gcc -shared -o libdynamiclibraryname.so file1.o, file2.o, ...
   -shared: Tells the gcc we are going to create a dynamic library
   -o: allows us to specify the name of dynamic library that we are creating.
 
