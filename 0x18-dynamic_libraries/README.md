@@ -32,9 +32,9 @@ operating system's dynamic linker/loader when that reference is encounter.
   * -o: allows us to specify the name of dynamic library that we are creating.
 
 ## How to use dynamic library?
-**step1: Make sure the runtime linker/loader knows where to find your shared library
+**step1: Make sure the runtime linker/loader knows where to find your shared library**
   Add the location of your shared library into the environment variable.
   >export LD_LIBRARY_PATH=/path/to/library:$LD_LIBRARY_PATH
 
-**step2: Link program with shared library
+**step2: Link program with shared library**
   >gcc -o executablename program_name.c -L/path/to/library/ -llibrary_name
