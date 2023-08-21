@@ -19,15 +19,17 @@ operating system's dynamic linker/loader when that reference is encounter.
   >gcc -c -fPIC file1.c, file2.c, ... 
  
   Using the above command, generate object code of the c files/codes you want
-  to include in your library
-  -c: This flag tells gcc to generate object files of file1.c, file2.c, ...
-  -fPIC: This flag ensures that the resulting object file can be loaded
+  to include in your library.
+
+  * -c: This flag tells gcc to generate object files of file1.c, file2.c, ...
+  * -fPIC: This flag ensures that the resulting object file can be loaded
          at any memory address and still function correctly.
 
 **step1: Create dynamic library with object code**
   >gcc -shared -o libdynamiclibraryname.so file1.o, file2.o, ...
-  -shared: Tells the gcc we are going to create a dynamic library
-  -o: allows us to specify the name of dynamic library that we are creating.
+
+  * -shared: Tells the gcc we are going to create a dynamic library
+  * -o: allows us to specify the name of dynamic library that we are creating.
 
 ## How to use dynamic library?
 **step1: Make sure the runtime linker/loader knows where to find your shared library
