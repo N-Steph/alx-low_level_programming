@@ -38,7 +38,7 @@ void hash_table_print(const hash_table_t *ht)
 		i++;
 		if (i < ht->size)
 		{
-			if(array[i] != NULL && counter != 0)
+			if (array[i] != NULL && counter != 0)
 				printf(", ");
 		}
 	}
