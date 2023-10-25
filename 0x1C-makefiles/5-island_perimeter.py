@@ -7,10 +7,12 @@ def island_perimeter(grid):
     Args:
         grid: a list of list of integers
     """
-    if len(grid) == 0:
-        return 0
+    if len(grid) == 0 or len(grid) > 100:
+        return 
     perimeter = 0
     for side in grid:
+        if len(side) > 100:
+            return
         for cell in side:
             if cell == 1 and perimeter == 0:
                 perimeter += 4
