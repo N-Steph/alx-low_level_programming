@@ -7,7 +7,7 @@ RM = rm -f
 all: $(OBJ) 
 	$(CC) $(OBJ) -o $(NAME) 
 clean:
-	$(RM) $(wildcard *~) $(wildcard *.swap) school
+	$(RM) *~ *.swap school
 oclean:
 	$(RM) $(OBJ)
 
