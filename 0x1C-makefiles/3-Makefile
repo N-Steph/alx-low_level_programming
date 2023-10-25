@@ -8,7 +8,7 @@ all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME) 
 .PHONY: clean
 clean:
-	$(RM) *~ *.swap school
+	$(RM) *~ *.swap $(NAME) 
 .PHONY: oclean
 oclean:
 	$(RM) $(OBJ)
